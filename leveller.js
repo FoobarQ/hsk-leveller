@@ -14,38 +14,34 @@ function getPinyin(character, mandarinMaps) {
     return "";
 }
 
-function request(url, mandarinMap) {
-    var xhr = new XMLHttpRequest();
-    try {
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState != 4)
-                return;
-            const rows = xhr.responseText.split("\n");
+async function request(url, mandarinMap) {
+    return new Promise(function (resolve, reject) {
+        var xhr = new XMLHttpRequest();
+        try {
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState != 4)
+                    return;
+                const rows = xhr.responseText.split("\n");
 
-            rows.forEach(row => {
-                const [character, pinyin, english] = row.split("\t");
-                mandarinMap.set(character, pinyin);
-            });
+                rows.forEach(row => {
+                    const [character, pinyin, _] = row.split("\t");
+                    mandarinMap.set(character, pinyin);
+                });
+                resolve()
+            }
 
+            xhr.onerror = function (error) {
+                console.debug(error);
+                reject(error);
+            }
+
+            xhr.open("GET", url, true);
+            xhr.send();
+        } catch (e) {
+            console.error(e);
         }
-
-        xhr.onerror = function (error) {
-            console.debug(error);
-        }
-
-        xhr.open("GET", url, true);
-        xhr.send();
-    } catch (e) {
-        console.error(e);
-    }
+    });
 }
-
-request(chrome.runtime.getURL("levels/one.txt"), HSK1);
-request(chrome.runtime.getURL("levels/two.txt"), HSK2);
-request(chrome.runtime.getURL("levels/three.txt"), HSK3);
-request(chrome.runtime.getURL("levels/four.txt"), HSK4);
-request(chrome.runtime.getURL("levels/five.txt"), HSK5);
-request(chrome.runtime.getURL("levels/six.txt"), HSK6);
 
 function addPinyin(plainText) {
     let annotatedText = "";
@@ -73,11 +69,17 @@ function addPinyin(plainText) {
     return annotatedText;
 }
 
-setTimeout(() => {
-    const elements = document.querySelectorAll("h3")
-    elements.forEach(function (element) {
-        if (element.innerHTML) {
-            element.innerHTML = addPinyin(element.innerHTML);
-        }
+request(chrome.runtime.getURL("levels/one.txt"), HSK1)
+    .then(request(chrome.runtime.getURL("levels/two.txt"), HSK2))
+    .then(request(chrome.runtime.getURL("levels/three.txt"), HSK3))
+    .then(request(chrome.runtime.getURL("levels/four.txt"), HSK4))
+    .then(request(chrome.runtime.getURL("levels/five.txt"), HSK5))
+    .then(request(chrome.runtime.getURL("levels/six.txt"), HSK6))
+    .then(() => {
+        const elements = document.querySelectorAll("h3")
+        elements.forEach(function (element) {
+            if (element.innerHTML) {
+                element.innerHTML = addPinyin(element.innerHTML);
+            }
+        });
     });
-}, 20000)

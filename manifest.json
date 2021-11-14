@@ -1,6 +1,18 @@
 {
     "name": "HSK Leveller",
     "description": "Levels hsk stuff or whatever the fuck",
-    "version": "0.0.1",
-    "manifest_version": 3
+    "version": "0.1.0",
+    "manifest_version": 3,
+    "content_scripts": [
+        {
+            "matches": ["https://www.bilibili.com/*"],
+            "js": ["leveller.js"]
+        }
+    ],
+    "web_accessible_resources" : [
+        {
+            "resources": ["levels/one.txt", "levels/two.txt", "levels/three.txt", "levels/four.txt", "levels/five.txt", "levels/six.txt"],
+            "matches": ["https://www.bilibili.com/*"]
+        }
+    ]
 }

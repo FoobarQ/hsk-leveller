@@ -1,45 +1,62 @@
-const mandarinMap = new Map();
-mandarinMap.set("爱", "ài");
-mandarinMap.set("八", "bā");
-mandarinMap.set("爸爸", "bà ba");
-mandarinMap.set("北京", "Běi jīng");
-mandarinMap.set("杯子", "bēi zi");
-mandarinMap.set("本", "běn");
-mandarinMap.set("不", "bù");
-mandarinMap.set("不客气", "bú kè qi");
-mandarinMap.set("菜", "cài");
-mandarinMap.set("茶", "chá");
-mandarinMap.set("吃", "chī");
-mandarinMap.set("出租车", "chū zū chē");
-mandarinMap.set("大", "dà");
-mandarinMap.set("打电话", "dǎ diàn huà");
-mandarinMap.set("的", "de");
-mandarinMap.set("点", "diǎn");
-mandarinMap.set("电脑", "diàn nǎo");
-mandarinMap.set("电视", "diàn shì");
-mandarinMap.set("电影", "diàn yǐng");
-mandarinMap.set("东西", "dōng xi");
-mandarinMap.set("都", "dōu");
-mandarinMap.set("读", "dú");
+const HSK1 = new Map();
+const HSK2 = new Map();
+const HSK3 = new Map();
+const HSK4 = new Map();
+const HSK5 = new Map();
+const HSK6 = new Map();
 
-function getPinyin(character) {
-    console.log("trying");
-    return mandarinMap.get(character) || "";
+function getPinyin(character, mandarinMaps) {
+    for (const mandarinMap of mandarinMaps) {
+        if (mandarinMap.has(character)) {
+            return mandarinMap.get(character)
+        }
+    }
+    return "";
 }
+
+function request(url, mandarinMap) {
+    var xhr = new XMLHttpRequest();
+    try {
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState != 4)
+                return;
+            const rows = xhr.responseText.split("\n");
+
+            rows.forEach(row => {
+                const [character, pinyin, english] = row.split("\t");
+                mandarinMap.set(character, pinyin);
+            });
+
+        }
+
+        xhr.onerror = function (error) {
+            console.debug(error);
+        }
+
+        xhr.open("GET", url, true);
+        xhr.send();
+    } catch (e) {
+        console.error(e);
+    }
+}
+
+request(chrome.runtime.getURL("levels/one.txt"), HSK1);
+request(chrome.runtime.getURL("levels/two.txt"), HSK2);
+request(chrome.runtime.getURL("levels/three.txt"), HSK3);
+request(chrome.runtime.getURL("levels/four.txt"), HSK4);
+request(chrome.runtime.getURL("levels/five.txt"), HSK5);
+request(chrome.runtime.getURL("levels/six.txt"), HSK6);
 
 function addPinyin(plainText) {
     let annotatedText = "";
     let tempChars = "";
     let tempPinyin = "";
     for (const character of plainText) {
-        console.log("one");
-        if (getPinyin(character)) {
-            tempPinyin += getPinyin(character);
+        if (getPinyin(character, [HSK1, HSK2, HSK3, HSK4, HSK5, HSK6])) {
+            tempPinyin += `${getPinyin(character, [HSK1, HSK2, HSK3, HSK4, HSK5, HSK6])} `;
             tempChars += character;
         } else {
-            console.log("two");
             if (tempPinyin) {
-                console.log("here");
                 annotatedText += `<ruby>${tempChars}<rt>${tempPinyin}</rt></ruby>`;
                 tempPinyin = "";
                 tempChars = "";
@@ -53,13 +70,14 @@ function addPinyin(plainText) {
         annotatedText += `<ruby>${tempChars}<rt>${tempPinyin}</rt></ruby>`;
     }
 
-    console.log(annotatedText);
     return annotatedText;
 }
 
-const elements = document.querySelectorAll("h3")
-elements.forEach(function (element) {
-    if (element.innerHTML) {
-        element.innerHTML = addPinyin(element.innerHTML);
-    }
-});
+setTimeout(() => {
+    const elements = document.querySelectorAll("h3")
+    elements.forEach(function (element) {
+        if (element.innerHTML) {
+            element.innerHTML = addPinyin(element.innerHTML);
+        }
+    });
+}, 20000)

@@ -1,0 +1,150 @@
+吧	ba	indicating suggestion
+白	bái	white, blank, free of charge, for nothing
+百	bǎi	100
+帮助	bāng zhù	assistance, help, to help, to assist
+报纸	bào zhǐ	newspaper
+比	bǐ	than, used for comparison
+别	bié	to leave, to distinguish, other, another, don't
+长	cháng	length, long
+唱歌	chàng gē	to sing
+出	chū	to go out, to exceed, to happen Measure, for dramas, plays, operas
+船	chuán	boat, ship
+穿	chuān	to wear
+次	cì	order, sequence Measure, "time(s)"
+从	cóng	from
+错	cuò	mistake, error, wrong
+大家	dà jiā	everybody, all
+打篮球	dǎ lán qiú	play basketball
+但是	dàn shì	but, however
+到	dào	to arrive, to reach, to, until, up to
+得	de	used to link verb with adjective
+等	děng	to wait
+弟弟	dì di	younger brother
+第一	dì yī	first, number one
+懂	dǒng	to understand, to know
+对	duì	right, correct
+房间	fáng jiān	room
+非常	fēi cháng	very
+服务员	fú wù yuán	waiter, service personnel
+高	gāo	high, tall
+告诉	gào su	to tell
+哥哥	gē ge	older brother
+给	gěi	to give
+公共汽车	gōng gòng qì chē	bus
+公斤	gōng jīn	kilogram Measure, kg
+公司	gōng sī	company
+贵	guì	expensive
+过	guo	indicating action in the past
+还	hái	still
+孩子	hái zi	child
+号	hào	number, day of month
+好吃	hǎo chī	tasty, delicious
+黑	hēi	black, dark
+红	hóng	dividend, red, popular, revlutionary
+欢迎	huān yíng	welcome!
+回答	huí dá	answer, to answer, to reply
+机场	jī chǎng	airport
+鸡蛋	jī dàn	(chicken) egg
+件	jiàn	Measure, for events, things, clothes, etc.
+教室	jiào shì	classroom
+姐姐	jiě jie	older sister
+介绍	jiè shào	to introduce, to recommend
+进	jìn	to advance, to enter
+近	jìn	near, close
+就	jiù	only, already, with regard to, as soon as, right away, even if
+觉得	jué de	to think, to feel
+咖啡	kā fēi	coffee
+开始	kāi shǐ	beginning, to begin
+考试	kǎo shì	exam
+课	kè	class, lesson, course
+可能	kě néng	might, maybe Auxiliary, can
+可以	kě yǐ	Auxiliary, can, may, able to
+快	kuài	quick, rapid, soon, almost
+快乐	kuài lè	happy
+累	lèi	tired
+离	lí	to leave, to be away from
+两	liǎng	two, some Measure, 50 gram
+路	lù	road, path
+旅游	lǚ yóu	trip, jorney, to travel
+卖	mài	to sell
+慢	màn	slow
+忙	máng	busy
+每	měi	each, per, all, each, every
+妹妹	mèi mei	younger sister
+门	mén	door Measure, for lessons
+男人	nán rén	man, men
+您	nín	you (singular, polite)
+牛奶	niú nǎi	cow milk
+女人	nǚ rén	woman
+旁边	páng biān	beside, aside
+跑步	pǎo bù	to run
+便宜	pián yi	cheap, inexpensive
+票	piào	ticket
+起床	qǐ chuáng	to get up (from bed)
+妻子	qī zi	wife
+千	qiān	1000
+晴	qíng	clear, sunny
+去年	qù nián	last year
+让	ràng	to permit, to let sb. do sth.
+上班	shàng bān	to go to work, to start work
+身体	shēn tǐ	body, health
+生病	shēng bìng	to get sick
+生日	shēng rì	birthday
+时间	shí jiān	time, period
+事情	shì qing	thing, affair, matter
+手表	shǒu biǎo	wrist watch
+手机	shǒu jī	mobile phone
+送	sòng	to deliver, to escort, to give, to send
+所以	suǒ yǐ	therefore, as a result, so
+它	tā	it
+题	tí	topic, problem, to inscribe, to mention
+踢足球	tī zú qiú	to play football
+跳舞	tiào wǔ	to dance
+外	wài	foreign, external, outside
+完	wán	to finish
+玩	wán	to play, to have fun
+晚上	wǎn shang	evening
+为什么	wèi shén me	why
+问	wèn	to ask
+问题	wèn tí	problem, question
+洗	xǐ	to wash
+西瓜	xī guā	watermelon
+希望	xī wàng	hope, to hope, to wish
+向	xiàng	direction, to face, to turn towards, formerly, all along, towards
+笑	xiào	smile, to smile, to laugh
+小时	xiǎo shí	hour
+新	xīn	new
+姓	xìng	surname
+休息	xiū xi	rest, to rest
+雪	xuě	snow
+眼睛	yǎn jing	eye
+颜色	yán sè	colour
+羊肉	yáng ròu	mutton
+药	yào	medicine, drug
+要	yào	Auxiliary, to want to, going to
+也	yě	also
+已经	yǐ jīng	already
+一起	yì qǐ	together
+意思	yì si	meaning, opinion, idea
+阴	yīn	cloudy, overcast
+因为	yīn wèi	because
+右边	yòu bian	right, right side
+游泳	yóu yǒng	swimming, to swim
+鱼	yú	fish
+元	yuán	Measure, for money (Yuan, RMB)
+远	yuǎn	far, distant
+运动	yùn dòng	movement, sports, to move about
+再	zài	again, once more
+早上	zǎo shang	early morning
+张	zhāng	to open up, to spread Measure, for pieces, flat objects
+丈夫	zhàng fu	husband
+找	zhǎo	to look for, to seek
+着	zhe	indicating action in progress
+真	zhēn	real, true, genuine
+正在	zhèng zài	in the process of, in course of
+知道	zhī dào	to know, to be aware of
+准备	zhǔn bèi	to prepare
+自行车	zì xíng chē	bicycle, bike
+走	zǒu	to walk
+最	zuì	most
+左边	zuǒ bian	left, left side

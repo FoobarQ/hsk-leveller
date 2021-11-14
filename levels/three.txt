@@ -1,0 +1,300 @@
+啊	a	showing approval
+阿姨	ā yí	aunt
+矮	ǎi	low, short
+爱好	ài hào	hobby, interest, to like
+安静	ān jìng	quiet, peaceful
+把	bǎ	handle, to grasp, to hold, for ba-sentences Measure, for a bunch or objects with handle
+半	bàn	half
+搬	bān	to move, to shift
+班	bān	class, team, squad Measure, for groups, rankings, etc.
+办法	bàn fǎ	method, way, means
+办公室	bàn gōng shì	office, bureau
+帮忙	bāng máng	to help, to do a favour
+饱	bǎo	full (from eating)
+包	bāo	bag, package, to cover, to wrap, to hold, to include
+被	bèi	by (for passive sentence)
+北方	běi fāng	north, northern part of a country
+比较	bǐ jiào	quite, rather, fairly, comparatively
+比赛	bǐ sài	competition, match, to compete
+必须	bì xū	Auxiliary, to have to, to must
+鼻子	bí zi	nose
+变化	biàn huà	change, variation, to change, to vary
+表示	biǎo shì	to express, to show, to indicate
+表演	biǎo yǎn	performance, to perform, to act
+别人	bié ren	others, other people
+宾馆	bīn guǎn	hotel
+冰箱	bīng xiāng	fridge, icebox
+才	cái	ability, talent, just, only if
+菜单	cài dān	menu
+参加	cān jiā	to attend, to take part, to join
+草	cǎo	grass, straw
+层	céng	layer, floor Measure, for layer, story, floor
+差	chà	to lack, short of, poor
+超市	chāo shì	supermarket
+衬衫	chèn shān	shirt, blouse
+成绩	chéng jì	score, achievement, grades
+城市	chéng shì	city, town
+迟到	chí dào	to be late
+厨房	chú fáng	kitchen
+除了	chú le	except for, apart from, besides
+出现	chū xiàn	to appear, to arise
+春	chūn	spring
+词语	cí yǔ	word, expression
+聪明	cōng ming	clever, intelligent, smart
+打扫	dǎ sǎo	to clean
+打算	dǎ suàn	plan, intention, to plan, to think of, to calculate
+带	dài	band, belt, area, region, to wear, to carry, to bring, to lead
+蛋糕	dàn gāo	cake
+担心	dān xīn	to worry, worried, anxious
+当然	dāng rán	certainly, of course
+地	de	used before a verb
+灯	dēng	lamp, light
+低	dī	low
+地方	dì fang	region, place, location
+地铁	dì tiě	subway
+地图	dì tú	map
+电梯	diàn tī	elevator
+电子邮件	diàn zǐ yóu jiàn	email
+东	dōng	east
+冬	dōng	winter
+动物	dòng wù	animal
+段	duàn	Measure, for paragraphs, segments, periods, stories
+短	duǎn	short, brief
+锻炼	duàn liàn	to exercise, to engage in physical exercise
+多么	duō me	how, what
+饿	è	hungry
+耳朵	ěr duo	ear
+而且	ér qiě	moreover, in addition, furthermore
+发烧	fā shāo	to have fever
+发现	fā xiàn	to discover, to find
+放	fàng	to let go, to put, have a vacation
+方便	fāng biàn	convenient
+放心	fàng xīn	to rest, to be at ease
+分	fēn	minute, point, 0.01 yuan, to divide, to distinguish
+附近	fù jìn	vicinity, nearby, next to
+复习	fù xí	revision, to revise
+敢	gǎn	Auxiliary, to dare
+干净	gān jìng	clean, tidy
+感冒	gǎn mào	common cold, to catch a cold
+刚才	gāng cái	just a moment ago
+跟	gēn	to follow, with, and
+根据	gēn jù	basis, foundation, to base on, according to, based on
+更	gèng	even more
+公园	gōng yuán	park
+故事	gù shi	story, tale
+刮风	guā fēng	to be windy
+关	guān	mountain pass, barrier, to close, to shut, to turn off
+关系	guān xì	relationship, relation, to affect, to have to do with
+关心	guān xīn	concern, to care for
+关于	guān yú	concerning, with regards to, about
+国家	guó jiā	country, state, nation
+过去	guò qù	to go over, to pass by, past, former
+果汁	guǒ zhī	fruit juice
+害怕	hài pà	to be afraid, to fear
+还是	hái shì	still, nevertheless, or
+河	hé	river
+黑板	hēi bǎn	blackboard
+护照	hù zhào	passport
+画	huà	picture, painting, to draw, to paint
+花	huā	flower, to spend
+花园	huā yuán	garden
+坏	huài	bad, broken, spoiled
+还	huán	to give back, to return
+换	huàn	to change, to exchange
+环境	huán jìng	environment, surroundings
+黄	huáng	to fall through, yellow, pornographic
+会议	huì yì	meeting, conference
+或者	huò zhě	or, possibly
+极	jí	pole, extremely, highly
+记得	jì de	to remember
+几乎	jī hū	almost, nearly
+机会	jī huì	opportunity, chance
+季节	jì jié	season, period
+检查	jiǎn chá	inspection, to check, to inspect, to examine
+简单	jiǎn dān	simple, uncomplicated
+健康	jiàn kāng	health, healthy
+见面	jiàn miàn	to meet, to see sb.
+讲	jiǎng	speech, lecture, to speak, to explain, to negotiate
+脚	jiǎo	foot
+角	jiǎo	angle, corner, horn Measure, for 0.1 yuan
+教	jiāo	to teach, to instruct
+借	jiè	to lend, to borrow, to make use of (an opportunity)
+接	jiē	to receive, to meet, to connect, to catch
+街道	jiē dào	street
+结婚	jié hūn	marriage, wedding, to marry
+解决	jiě jué	to settle (dispute), to resolve, to solve
+节目	jié mù	program, item
+节日	jié rì	holiday, festival
+结束	jié shù	termination, end, to finish, to end, to conclude
+经常	jīng cháng	often, frequently
+经过	jīng guò	to pass, to go through, after, as a result of
+经理	jīng lǐ	manager, director
+旧	jiù	old, used, worn
+久	jiǔ	long (time)
+举行	jǔ xíng	to hold (meeting, etc.)
+句子	jù zi	sentence
+决定	jué dìng	decision, to decide
+刻	kè	to cut, to carve Measure, for quarter of an hour
+渴	kě	thirsty
+可爱	kě ài	cute, lovely
+客人	kè rén	guest, customer, visitor
+空调	kōng tiáo	air conditioning
+口	kǒu	mouth Measure, for things with mouths or a mouth full of
+哭	kū	to cry, to weep
+裤子	kù zi	trousers
+筷子	kuài zi	chopsticks
+蓝	lán	blue
+老	lǎo	old, always
+离开	lí kāi	to depart, to leave
+历史	lì shǐ	history
+礼物	lǐ wù	gift, present
+脸	liǎn	face
+练习	liàn xí	exercise, practice, to practice
+辆	liàng	Measure, for vehicles
+了解	liǎo jiě	to understand
+邻居	lín jū	neighbor
+楼	lóu	storied building Measure, for floor
+绿	lǜ	green
+马	mǎ	horse
+马上	mǎ shàng	immediately, at once
+满意	mǎn yì	to satisfy, satisfied
+帽子	mào zi	hat, cap
+米	mǐ	rice Measure, for meter
+面包	miàn bāo	bread
+面条	miàn tiáo	noodles
+明白	míng bai	to understand, clear, obvious
+拿	ná	to hold, to seize
+奶奶	nǎi nai	grandmother (father's mother)
+南	nán	south
+难	nán	difficult
+难过	nán guò	to feel sorry, sad
+年级	nián jí	grade, year
+年轻	nián qīng	young
+鸟	niǎo	bird
+努力	nǔ lì	great effort, to strive, to work/study hard, hard, hardworking
+爬山	pá shān	hiking, to climb a mountain
+盘子	pán zi	tray, plate, dish
+胖	pàng	fat, plump
+啤酒	pí jiǔ	beer
+葡萄	pú tao	grape
+普通话	pǔ tōng huà	Mandarin
+骑	qí	to ride (animal or bike)
+奇怪	qí guài	strange
+其实	qí shí	actually, in fact
+其他	qí tā	other, others
+铅笔	qiān bǐ	pencil
+清楚	qīng chu	clear, distinct
+秋	qiū	autumn, fall
+裙子	qún zi	skirt
+然后	rán hòu	then, afterwards
+热情	rè qíng	enthusiasm, passion, enthusiastic, passionate, cordial
+认为	rèn wéi	to think, to believe, to consider
+认真	rèn zhēn	conscientious, earnest, serious
+容易	róng yì	easy
+如果	rú guǒ	if
+伞	sǎn	umbrella
+上网	shàng wǎng	to be on the internet
+生气	shēng qì	to be/get angry, angry, mad
+声音	shēng yīn	voice, sound
+使	shǐ	envoy, messenger, to make, to cause, to use, to employ
+世界	shì jiè	world
+瘦	shòu	thin, slim
+树	shù	tree
+舒服	shū fu	comfortable
+叔叔	shū shu	uncle
+数学	shù xué	mathematics
+刷牙	shuā yá	to brush teeth
+双	shuāng	two, pair, both Measure, for a pair (of shoes, etc.)
+水平	shuǐ píng	level, standard, horizontal
+司机	sī jī	driver
+虽然	suī rán	although
+太阳	tài yáng	sun
+糖	táng	sugar, sweets, candy
+特别	tè bié	special, particular
+疼	téng	pain, to ache, to hurt
+提高	tí gāo	to raise, to increase
+体育	tǐ yù	sports
+甜	tián	sweet
+条	tiáo	strip, clause Measure, for long thin things
+同事	tóng shì	colleague
+同意	tóng yì	to agree, to consent, to approve
+头发	tóu fa	hair (on the head)
+突然	tū rán	sudden, abrupt, suddenly, unexpectedly
+图书馆	tú shū guǎn	library
+腿	tuǐ	leg
+万	wàn	10000
+碗	wǎn	bowl
+完成	wán chéng	to complete, to accomplish
+忘记	wàng jì	to forget
+为	wèi	to do, to act, to be, to become, for (sb.)
+位	wèi	position, place, seat Measure, for people
+为了	wèi le	for, in order to
+文化	wén huà	culture
+西	xī	west
+习惯	xí guàn	habit, usual practice, custom, to be/get used to
+洗手间	xǐ shǒu jiān	toilet
+洗澡	xǐ zǎo	to take a shower, to have a bath
+夏	xià	summer
+先	xiān	early, former, first, before
+像	xiàng	picture, portrait, be/look like, to appear, to seem
+香蕉	xiāng jiāo	banana
+相同	xiāng tóng	identical, same
+相信	xiāng xìn	to believe in, have faith in
+小心	xiǎo xīn	to be careful, careful, Take care!
+校长	xiào zhǎng	headmaster, president (university)
+鞋	xié	shoe
+信	xìn	letter, trust, to believe, to trust
+新闻	xīn wén	news
+新鲜	xīn xiān	fresh (food, experience, etc.)
+行李箱	xíng li xiāng	suitcase
+兴趣	xìng qù	interest
+熊猫	xióng māo	panda
+需要	xū yào	needs, to need, to want
+选择	xuǎn zé	choice, option, to choose, to select
+眼镜	yǎn jìng	eyeglasses
+要求	yāo qiú	demand, requirement, to require, to demand
+爷爷	yé ye	grandfather (father's father)
+一般	yì bān	ordinary, general, common, in general, generally
+一边	yì biān	one side, on the one hand
+一定	yí dìng	definite, fixed, given, surely, certainly
+一共	yí gòng	althogether
+以后	yǐ hòu	after, afterwards
+一会儿	yí huì r	a while, in a moment, a little while
+以前	yǐ qián	before, previous, formerly
+以为	yǐ wéi	to think (wrongly), to be under the (wrong) impression
+一样	yí yàng	alike, equal to
+一直	yī zhí	always, continuously, straight
+银行	yín háng	bank (for money)
+音乐	yīn yuè	music
+应该	yīng gāi	Auxiliary, should, ought to
+影响	yǐng xiǎng	influence, effect, to influence, to affect
+用	yòng	to use, to employ, to apply
+又	yòu	again
+有名	yǒu míng	famous, well known
+游戏	yóu xì	game, play
+遇到	yù dào	to meet, to run into
+愿意	yuàn yì	Auxiliary, to be willing, be ready, to wish, to want
+越	yuè	to exceed, to climb over, to surpass
+月亮	yuè liang	moon
+云	yún	cloud
+站	zhàn	station, stop, to stand, to stop, to halt
+长	zhǎng	chief, head, to grow, to develop
+照顾	zhào gù	to take care of, to look after
+着急	zháo jí	to worry
+照片	zhào piàn	photo, picture
+照相机	zhào xiàng jī	camera
+只	zhǐ	only, just, merely
+种	zhǒng	species, race, breed Measure, type, kind, sort or for languages
+中间	zhōng jiān	between, in the middle, mid
+重要	zhòng yào	important
+终于	zhōng yú	at last, finally, eventually
+周末	zhōu mò	weekend
+祝	zhù	to wish, to express good wishes
+主要	zhǔ yào	main, principal, major
+注意	zhù yì	to pay attention to
+字典	zì diǎn	dictionary, character book
+自己	zì jǐ	oneself, self
+总是	zǒng shì	always
+最近	zuì jìn	recently, lately, soon
+作业	zuò yè	homework, task, work
+作用	zuò yòng	action, function, impact, effect, to affect

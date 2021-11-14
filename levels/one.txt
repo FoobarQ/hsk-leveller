@@ -1,0 +1,150 @@
+爱	ài	to love
+八	bā	8
+爸爸	bà ba	dad
+北京	Běi jīng	Beijing
+杯子	bēi zi	cup, glass
+本	běn	root, basis, foundation, origin, capital Measure, for books, files, etc.
+不	bù	no, not
+不客气	bú kè qi	you are welcome
+菜	cài	dish, vegetable
+茶	chá	tea
+吃	chī	to eat
+出租车	chū zū chē	taxi
+大	dà	big, great
+打电话	dǎ diàn huà	to make a phone call
+的	de	to form an attribute
+点	diǎn	point, dot, to nod, to click Measure, a little, a bit
+电脑	diàn nǎo	computer
+电视	diàn shì	TV(-set)
+电影	diàn yǐng	movie, film
+东西	dōng xi	thing
+都	dōu	all, both, all, both
+读	dú	to read aloud
+对不起	duì bu qǐ	sorry, I'm sorry
+多	duō	much, many
+多少	duō shao	how many, how much
+二	èr	2
+儿子	ér zi	son
+饭馆	fàn guǎn	restaurant
+飞机	fēi jī	airplane
+分钟	fēn zhōng	minute
+高兴	gāo xìng	happy, glad, cheerful
+个	gè	Measure, for almost everything
+工作	gōng zuò	job, to work
+狗	gǒu	dog
+汉语	hàn yǔ	Chinese language
+好	hǎo	good, nice
+和	hé	with, and
+喝	hē	to drink
+很	hěn	very, quite
+后面	hòu miàn	rear, back, behind
+回	huí	to return, to answer, to reply Measure, for events of action
+会	huì	meeting, conference Auxiliary, can, to be able to
+火车站	huǒ chē zhàn	train station
+几	jǐ	how many, several
+家	jiā	family, home, houshold Measure, for businesses, families
+叫	jiào	to be called, to call, to shout
+今天	jīn tiān	today
+九	jiǔ	9
+开	kāi	to open, to start, to drive (car, etc.)
+看	kàn	to see, to watch, to look at
+看见	kàn jiàn	to see, to catch sight of
+块	kuài	Measure, for a piece
+来	lái	to come, to arrive, ever since
+老师	lǎo shī	teacher
+了	le	indicating past or change
+冷	lěng	cold
+里	lǐ	in, inside Measure, for 0.5 km
+零	líng	0
+六	liù	6
+吗	ma	to form a question
+妈妈	mā ma	mother
+买	mǎi	to buy
+猫	māo	cat
+没	méi	not
+没关系	méi guān xi	it doesn't matter
+米饭	mǐ fàn	(cooked) rice
+明天	míng tiān	tomorrow
+名字	míng zi	name
+那	nà	that
+哪	nǎ	which
+呢	ne	to build a question based on already mentioned subjects
+能	néng	Auxiliary, to be able to
+你	nǐ	you (singular)
+年	nián	year
+女儿	nǚ ér	daughter
+朋友	péng you	friend
+漂亮	piào liang	pretty, beautiful
+苹果	píng guǒ	apple
+七	qī	7
+钱	qián	money
+前面	qián miàn	ahead, in front
+请	qǐng	to ask, to invite, please
+去	qù	to go
+热	rè	hot, warm
+人	rén	person, people
+认识	rèn shi	understanding, knowledge, awareness, to know, to recognize, to understand, to be familiar with
+日	rì	day, sun
+三	sān	3
+上	shàng	to go up, to attend, to climb, on, upon, previous, upper
+商店	shāng diàn	shop, store
+上午	shàng wǔ	morning
+少	shǎo	few, little
+谁	shéi	who
+什么	shén me	what
+十	shí0
+是	shì	is, to be
+时候	shí hou	time, moment, period
+书	shū	book
+水	shuǐ	Water
+水果	shuǐ guǒ	fruit
+睡觉	shuì jiào	to sleep, to go to bed
+说话	shuō huà	to speak, to talk, to gossip
+四	sì	4
+岁	suì	Measure, "years old"
+他	tā	he
+她	tā	she
+太	tài	too, extremely
+天气	tiān qì	weather
+听	tīng	to listen, to hear, to obey Measure, for canned beverages
+同学	tóng xué	classmate
+喂	wèi	to feed, to breed, hello
+我	wǒ	I
+我们	wǒ men	we
+五	wǔ	5
+喜欢	xǐ huan	to like
+下	xià	descend, fall Measure, for times of action, below, down, under
+下午	xià wǔ	afternoon
+下雨	xià yǔ	to rain
+先生	xiān sheng	Mister (Mr.), teacher
+现在	xiàn zài	now
+想	xiǎng	to think, to miss Auxiliary, to want
+小	xiǎo	small
+小姐	xiǎo jiě	Miss, young lady
+写	xiě	to write
+些	xiē	Measure, some, few, several
+谢谢	xiè xie	thanks!
+星期	xīng qī	week
+学生	xué sheng	student, pupil
+学习	xué xí	to study, to learn
+学校	xué xiào	school
+一	yī	1
+衣服	yī fu	clothes
+医生	yī shēng	doctor
+医院	yī yuàn	hospital
+椅子	yǐ zi	chair
+有	yǒu	to have, to exist, to be
+月	yuè	month, moon
+在	zài	at, on, in, for action in progress
+再见	zài jiàn	goodbye, see you
+怎么	zěn me	how
+怎么样	zěn me yàng	how is/are, how about that?
+这	zhè	this
+中国	Zhōng guó	China
+中午	zhōng wǔ	noon, midday
+住	zhù	to live, to stay, to reside
+桌子	zhuō zi	table
+字	zì	word, character
+做	zuò	to do, to make
+坐	zuò	to sit, to take (bus, train, etc.)
+昨天	zuó tiān	yesterday

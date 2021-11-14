@@ -44,16 +44,21 @@ async function request(url, mandarinMap) {
 }
 
 function addPinyin(plainText) {
+    if (plainText.includes("class=\"hsk-leveller\"")) {
+        return;
+    }
+
     let annotatedText = "";
     let tempChars = "";
     let tempPinyin = "";
+
     for (const character of plainText) {
         if (getPinyin(character, [HSK1, HSK2, HSK3, HSK4, HSK5, HSK6])) {
             tempPinyin += `${getPinyin(character, [HSK1, HSK2, HSK3, HSK4, HSK5, HSK6])} `;
             tempChars += character;
         } else {
             if (tempPinyin) {
-                annotatedText += `<ruby>${tempChars}<rt>${tempPinyin}</rt></ruby>`;
+                annotatedText += `<ruby class="hsk-leveller">${tempChars}<rt>${tempPinyin}</rt></ruby>`;
                 tempPinyin = "";
                 tempChars = "";
             } else {
@@ -63,23 +68,40 @@ function addPinyin(plainText) {
     }
 
     if (tempPinyin) {
-        annotatedText += `<ruby>${tempChars}<rt>${tempPinyin}</rt></ruby>`;
+        annotatedText += `<ruby class="hsk-leveller">${tempChars}<rt>${tempPinyin}</rt></ruby>`;
     }
 
     return annotatedText;
 }
 
-request(chrome.runtime.getURL("levels/one.txt"), HSK1)
-    .then(request(chrome.runtime.getURL("levels/two.txt"), HSK2))
-    .then(request(chrome.runtime.getURL("levels/three.txt"), HSK3))
-    .then(request(chrome.runtime.getURL("levels/four.txt"), HSK4))
-    .then(request(chrome.runtime.getURL("levels/five.txt"), HSK5))
-    .then(request(chrome.runtime.getURL("levels/six.txt"), HSK6))
-    .then(() => {
-        const elements = document.querySelectorAll("h3")
-        elements.forEach(function (element) {
-            if (element.innerHTML) {
-                element.innerHTML = addPinyin(element.innerHTML);
-            }
-        });
+function decorate_characters() {
+    const elements = document.querySelectorAll("h1, h2, h3, h4, h5, p")
+    elements.forEach(function (element) {
+        if (element.innerHTML) {
+            element.innerHTML = addPinyin(element.innerHTML);
+        }
     });
+}
+
+function clear() {
+    const elements = document.querySelectorAll(".hsk-leveller");
+    elements.forEach(function (element) {
+        element.remove();
+    })
+}
+
+function refresh() {
+    clear();
+    decorate_characters();
+}
+
+function update() {
+    decorate_characters();
+}
+
+async function main() {
+    await Promise.all([request(chrome.runtime.getURL("levels/one.txt"), HSK1), request(chrome.runtime.getURL("levels/two.txt"), HSK2), request(chrome.runtime.getURL("levels/three.txt"), HSK3), request(chrome.runtime.getURL("levels/four.txt"), HSK4), request(chrome.runtime.getURL("levels/five.txt"), HSK5), request(chrome.runtime.getURL("levels/six.txt"), HSK6)]);
+    decorate_characters();
+}
+
+main();

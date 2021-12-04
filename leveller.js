@@ -100,7 +100,7 @@ function update() {
 }
 
 async function main() {
-    await Promise.all([request(chrome.runtime.getURL("levels/one.txt"), HSK1), request(chrome.runtime.getURL("levels/two.txt"), HSK2), request(chrome.runtime.getURL("levels/three.txt"), HSK3), request(chrome.runtime.getURL("levels/four.txt"), HSK4), request(chrome.runtime.getURL("levels/five.txt"), HSK5), request(chrome.runtime.getURL("levels/six.txt"), HSK6)]);
+    await Promise.all([request(chrome.runtime.getURL("levels/1.txt"), HSK1), request(chrome.runtime.getURL("levels/2.txt"), HSK2), request(chrome.runtime.getURL("levels/3.txt"), HSK3), request(chrome.runtime.getURL("levels/4.txt"), HSK4), request(chrome.runtime.getURL("levels/5.txt"), HSK5), request(chrome.runtime.getURL("levels/6.txt"), HSK6)]);
     decorate_characters();
 }
 

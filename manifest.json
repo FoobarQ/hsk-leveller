@@ -11,7 +11,11 @@
     ],
     "web_accessible_resources" : [
         {
-            "resources": ["levels/one.txt", "levels/two.txt", "levels/three.txt", "levels/four.txt", "levels/five.txt", "levels/six.txt"],
+            "resources": [
+                "levels/1.txt", "levels/2.txt", 
+                "levels/3.txt", "levels/4.txt", 
+                "levels/5.txt", "levels/6.txt"
+            ],
             "matches": ["https://www.bilibili.com/*"]
         }
     ]

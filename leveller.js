@@ -1,16 +1,17 @@
+const characterGroup = {};
 const HSK1 = new Map();
 const HSK2 = new Map();
 const HSK3 = new Map();
 const HSK4 = new Map();
 const HSK5 = new Map();
 const HSK6 = new Map();
+const HSK7 = new Map();
 
-function getPinyin(character, mandarinMaps) {
-    for (const mandarinMap of mandarinMaps) {
-        if (mandarinMap.has(character)) {
-            return mandarinMap.get(character)
-        }
+function getPinyin(character, mandarinMap) {
+    if (mandarinMap.has(character)) {
+        return mandarinMap.get(character)
     }
+
     return "";
 }
 
@@ -44,40 +45,38 @@ async function request(url, mandarinMap) {
 }
 
 function addPinyin(plainText) {
-    if (plainText.includes("class=\"hsk-leveller\"")) {
-        return;
-    }
-
     let annotatedText = "";
-    let tempChars = "";
-    let tempPinyin = "";
+    let stack = 0;
+    let found = false;
 
     for (const character of plainText) {
-        if (getPinyin(character, [HSK1, HSK2, HSK3, HSK4, HSK5, HSK6])) {
-            tempPinyin += `${getPinyin(character, [HSK1, HSK2, HSK3, HSK4, HSK5, HSK6])} `;
-            tempChars += character;
-        } else {
-            if (tempPinyin) {
-                annotatedText += `<ruby class="hsk-leveller">${tempChars}<rt>${tempPinyin}</rt></ruby>`;
-                tempPinyin = "";
-                tempChars = "";
-            } else {
-                annotatedText += character;
+        found = false;
+        if (character === "<") {
+            stack++;
+        } else if (character === ">") {
+            stack--;
+        } else if (!stack && !(/\d/.test(character))) {
+            const levels = ["HSK6", "HSK5", "HSK4", "HSK3", "HSK2", "HSK1", "HSK7+"];
+            for (const level of levels) {
+                let pinyin;
+                if ((pinyin = getPinyin(character, characterGroup[level]))) {
+                    annotatedText += `<ruby class="hsk-leveller ${level}">${character}<rt>${pinyin}</rt></ruby>`;
+                    found = true;
+                    break;
+                }
             }
         }
-    }
-
-    if (tempPinyin) {
-        annotatedText += `<ruby class="hsk-leveller">${tempChars}<rt>${tempPinyin}</rt></ruby>`;
+        if (!found) {
+            annotatedText += character;
+        }
     }
 
     return annotatedText;
 }
 
-function decorate_characters() {
-    const elements = document.querySelectorAll("h1, h2, h3, h4, h5, p")
+function decorate_characters(elements) {
     elements.forEach(function (element) {
-        if (element.innerHTML) {
+        if (element.innerHTML && element.innerHTML.length > 0 && !element.innerHTML.includes("class=\"hsk-leveller")) {
             element.innerHTML = addPinyin(element.innerHTML);
         }
     });
@@ -96,12 +95,29 @@ function refresh() {
 }
 
 function update() {
-    decorate_characters();
+    decorate_characters(document.querySelectorAll("body p, h1, h2, h3, h4, h5, h6, h7, span, a"));
 }
 
 async function main() {
-    await Promise.all([request(chrome.runtime.getURL("levels/1.txt"), HSK1), request(chrome.runtime.getURL("levels/2.txt"), HSK2), request(chrome.runtime.getURL("levels/3.txt"), HSK3), request(chrome.runtime.getURL("levels/4.txt"), HSK4), request(chrome.runtime.getURL("levels/5.txt"), HSK5), request(chrome.runtime.getURL("levels/6.txt"), HSK6)]);
-    decorate_characters();
+    await Promise.all([
+        request(chrome.runtime.getURL("levels/1.txt"), HSK1),
+        request(chrome.runtime.getURL("levels/2.txt"), HSK2),
+        request(chrome.runtime.getURL("levels/3.txt"), HSK3),
+        request(chrome.runtime.getURL("levels/4.txt"), HSK4),
+        request(chrome.runtime.getURL("levels/5.txt"), HSK5),
+        request(chrome.runtime.getURL("levels/6.txt"), HSK6),
+        request(chrome.runtime.getURL("levels/7+.txt"), HSK7)
+    ]);
+
+    characterGroup["HSK1"] = HSK1;
+    characterGroup["HSK2"] = HSK2;
+    characterGroup["HSK3"] = HSK3;
+    characterGroup["HSK4"] = HSK4;
+    characterGroup["HSK5"] = HSK5;
+    characterGroup["HSK6"] = HSK6;
+    characterGroup["HSK7+"] = HSK7;
+
+    setInterval(update, 700);
 }
 
 main();

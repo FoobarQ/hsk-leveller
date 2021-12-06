@@ -60,7 +60,7 @@ function addPinyin(plainText) {
             for (const level of levels) {
                 let pinyin;
                 if ((pinyin = getPinyin(character, characterGroup[level]))) {
-                    annotatedText += `<ruby class="hsk-leveller ${level}">${character}<rt>${pinyin}</rt></ruby>`;
+                    annotatedText += `<hsk pinyin="${pinyin.trim()}" class="${level}">${character}</hsk>`;
                     found = true;
                     break;
                 }
@@ -76,7 +76,7 @@ function addPinyin(plainText) {
 
 function decorate_characters(elements) {
     elements.forEach(function (element) {
-        if (element.innerHTML && element.innerHTML.length > 0 && !element.innerHTML.includes("class=\"hsk-leveller")) {
+        if (element.innerHTML && element.innerHTML.length > 0 && !element.innerHTML.includes("</hsk>")) {
             element.innerHTML = addPinyin(element.innerHTML);
         }
     });
@@ -116,6 +116,24 @@ async function main() {
     characterGroup["HSK5"] = HSK5;
     characterGroup["HSK6"] = HSK6;
     characterGroup["HSK7+"] = HSK7;
+    const style = document.createElement("style");
+    style.innerHTML = `    hsk:before {
+        content: attr(pinyin);
+        display: block;
+        font-size: 50%;
+        text-align: start;
+        line-height: 1.2;
+    }
+    
+    hsk {
+        display: inline-block;
+        text-indent: 0px;
+        line-height: normal;
+        -webkit-text-emphasis: none;
+        text-align: center;
+        line-height: 1;
+    }`
+    document.querySelector("body").appendChild(style);
 
     setInterval(update, 700);
 }

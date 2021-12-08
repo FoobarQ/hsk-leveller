@@ -1,0 +1,48 @@
+
+
+body {
+    height: 315px;
+    width: 245px;
+}
+
+#slidecontainer {
+    margin: 20px;
+    height: 175px;
+    width: 20px;
+    float: left;
+}
+
+h2 {
+    text-align: center;
+}
+
+#labelcontainer {
+    float: left;
+    margin: 20px;
+    margin-top: 10px;
+}
+
+li {
+    list-style: none;
+    margin-top: 13px;
+}
+
+li:first-of-type {
+    margin-top: 0px;
+}
+
+ul {
+    margin-top: 0px;
+    padding-left: 0px;
+}
+
+button {
+    width: 90%;
+    margin-left: 5%;
+}
+
+p {
+    padding: auto;
+    margin: auto;
+    text-align: center;
+}

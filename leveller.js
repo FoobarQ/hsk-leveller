@@ -6,6 +6,12 @@ const HSK4 = new Map();
 const HSK5 = new Map();
 const HSK6 = new Map();
 const HSK7 = new Map();
+const selection = {
+    lower: 0,
+    higher: 6
+}
+const levels = ["HSK6", "HSK5", "HSK4", "HSK3", "HSK2", "HSK1", "HSK7+"];
+
 
 function getPinyin(character, mandarinMap) {
     if (mandarinMap.has(character)) {
@@ -56,11 +62,10 @@ function addPinyin(plainText) {
         } else if (character === ">") {
             stack--;
         } else if (!stack && !(/\d/.test(character))) {
-            const levels = ["HSK6", "HSK5", "HSK4", "HSK3", "HSK2", "HSK1", "HSK7+"];
             for (const level of levels) {
                 let pinyin;
                 if ((pinyin = getPinyin(character, characterGroup[level]))) {
-                    annotatedText += `<hsk pinyin="${pinyin.trim()}" class="${level}">${character}</hsk>`;
+                    annotatedText += `<hsk pinyin="${pinyin.trim()}" class="${level}" ${hskLevelInRange(level) ? "" : "disabled"}>${character}</hsk>`;
                     found = true;
                     break;
                 }
@@ -82,21 +87,38 @@ function decorate_characters(elements) {
     });
 }
 
-function clear() {
-    const elements = document.querySelectorAll(".hsk-leveller");
-    elements.forEach(function (element) {
-        element.remove();
-    })
-}
-
-function refresh() {
-    clear();
-    decorate_characters();
-}
-
 function update() {
     decorate_characters(document.querySelectorAll("body p, h1, h2, h3, h4, h5, h6, h7, span, a"));
 }
+
+function setSelection(lower, higher) {
+    selection.lower = lower;
+    selection.higher = higher;
+    for (const level of levels) {
+        if (!document.getElementsByClassName(level))
+            continue;
+
+        if (hskLevelInRange(level)) {
+            for (const element of document.getElementsByClassName(levels[i])) {
+                element.removeAttribute("disabled");
+            }
+        } else {
+            for (const element of document.getElementsByClassName(levels[i])) {
+                element.setAttribute("disabled", "");
+            }
+        }
+    }
+}
+
+function hskLevelInRange(level) {
+    const index = levels.indexOf(level);
+    return !(index < selection.lower || index > selection.higher);
+}
+
+chrome.runtime.onMessage.addListener((message) => {
+    if (message.functionName === "setSelection")
+        setSelection(message.lower, message.higher);
+});
 
 async function main() {
     await Promise.all([
@@ -117,7 +139,8 @@ async function main() {
     characterGroup["HSK6"] = HSK6;
     characterGroup["HSK7+"] = HSK7;
     const style = document.createElement("style");
-    style.innerHTML = `    hsk:before {
+    style.innerHTML = `
+    hsk:not([disabled]):before {
         content: attr(pinyin);
         display: block;
         font-size: 50%;

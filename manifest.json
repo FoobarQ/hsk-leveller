@@ -1,26 +1,27 @@
 {
-    "name": "HSK Leveller",
-    "description": "Levels hsk stuff or whatever the fuck",
-    "version": "0.4.0",
-    "manifest_version": 3,
-    "content_scripts": [
-        {
-            "matches": ["https://www.bilibili.com/*"],
-            "js": ["leveller.js"]
-        }
-    ],
-    "web_accessible_resources" : [
-        {
-            "resources": [
-                "levels/1.txt", "levels/2.txt", 
-                "levels/3.txt", "levels/4.txt", 
-                "levels/5.txt", "levels/6.txt",
-                "levels/7+.txt"
-            ],
-            "matches": ["https://www.bilibili.com/*"]
-        }
-    ],
-    "action": {
-        "default_popup": "options.html"
-    }
+	"name": "HSK Leveller",
+	"description": "Levels hsk stuff or whatever the fuck",
+	"version": "0.5.0",
+	"manifest_version": 3,
+	"background": {
+		"service_worker": "background.js"
+	},
+	"permissions": ["activeTab", "scripting", "tabs"],
+	"web_accessible_resources": [
+		{
+			"resources": [
+				"levels/1.txt",
+				"levels/2.txt",
+				"levels/3.txt",
+				"levels/4.txt",
+				"levels/5.txt",
+				"levels/6.txt",
+				"levels/7+.txt"
+			],
+			"matches": ["<all_urls>"]
+		}
+	],
+	"action": {
+		"default_title": "HSK Leveller"
+	}
 }

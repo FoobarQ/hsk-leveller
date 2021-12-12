@@ -1,7 +1,7 @@
 {
 	"name": "HSK Leveller",
 	"description": "Levels hsk stuff or whatever the fuck",
-	"version": "0.5.1",
+	"version": "0.5.2",
 	"manifest_version": 3,
 	"background": {
 		"service_worker": "background.js"

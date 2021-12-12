@@ -12,15 +12,6 @@ const selection = {
 }
 const levels = ["HSK6", "HSK5", "HSK4", "HSK3", "HSK2", "HSK1", "HSK7+"];
 
-
-function getPinyin(character, characterGroup) {
-    if (mandarinMap.has(character)) {
-        return mandarinMap.get(character)
-    }
-
-    return "";
-}
-
 async function request(url, mandarinMap) {
     return new Promise(function (resolve, reject) {
         var xhr = new XMLHttpRequest();
@@ -191,7 +182,7 @@ async function main() {
         content: attr(pinyin);
         display: block;
         font-size: 50%;
-        text-align: start;
+        text-align: center;
         line-height: 1.2;
     }
     

@@ -1,4 +1,4 @@
-const characterGroup = {};
+const characterGroup = new Map();
 const HSK1 = new Map();
 const HSK2 = new Map();
 const HSK3 = new Map();
@@ -13,7 +13,7 @@ const selection = {
 const levels = ["HSK6", "HSK5", "HSK4", "HSK3", "HSK2", "HSK1", "HSK7+"];
 
 
-function getPinyin(character, mandarinMap) {
+function getPinyin(character, characterGroup) {
     if (mandarinMap.has(character)) {
         return mandarinMap.get(character)
     }
@@ -53,27 +53,45 @@ async function request(url, mandarinMap) {
 function addPinyin(plainText) {
     let annotatedText = "";
     let stack = 0;
-    let found = false;
-
-    for (const character of plainText) {
-        found = false;
+    const allCharacters = Array.from(characterGroup.keys()).join(":");
+    for (let i = 0; i < plainText.length; i++) {
+        let character = plainText[i];
         if (character === "<") {
             stack++;
         } else if (character === ">") {
             stack--;
-        } else if (!stack && !(/\d/.test(character))) {
-            for (const level of levels) {
-                let pinyin;
-                if ((pinyin = getPinyin(character, characterGroup[level]))) {
-                    annotatedText += `<hsk pinyin="${pinyin.trim()}" class="${level}" ${hskLevelInRange(level) ? "" : "disabled"}>${character}</hsk>`;
-                    found = true;
+        } else if (!stack && !(/(\d|\w|\s)/.test(character)) && allCharacters.includes(character) && character.trim()) {
+            while (true) {
+                character += plainText[i + 1];
+                if (allCharacters.includes(character))
+                    i++;
+                else {
+                    character = character.replace("undefined", "");
+                    i++;
+                    while (character.length > 1 && !characterGroup.has(character)) {
+                        character = character.slice(0, -1);
+                        i--;
+                    }
                     break;
                 }
             }
+
+
+            if (characterGroup.has(character)) {
+                const [pinyin, level] = characterGroup.get(character).split(":");
+                const pinyinParts = pinyin.trim().split(" ");
+                const characterParts = character.split("");
+                if (pinyinParts.length === 1)
+                    annotatedText += `<hsk pinyin="${pinyin}" class="${level}" ${hskLevelInRange(level) ? "" : "disabled"}>${character}</hsk>`
+                else {
+                    for (let j = 0; j < characterParts.length; j++) {
+                        annotatedText += `<hsk pinyin="${pinyinParts[j]}" class="${level}" ${hskLevelInRange(level) ? "" : "disabled"}>${characterParts[j]}</hsk>`;
+                    }
+                }
+                continue;
+            }
         }
-        if (!found) {
-            annotatedText += character;
-        }
+        annotatedText += character;
     }
 
     return annotatedText;
@@ -131,13 +149,42 @@ async function main() {
         request(chrome.runtime.getURL("levels/7+.txt"), HSK7)
     ]);
 
-    characterGroup["HSK1"] = HSK1;
-    characterGroup["HSK2"] = HSK2;
-    characterGroup["HSK3"] = HSK3;
-    characterGroup["HSK4"] = HSK4;
-    characterGroup["HSK5"] = HSK5;
-    characterGroup["HSK6"] = HSK6;
-    characterGroup["HSK7+"] = HSK7;
+    for (const key of HSK6.keys()) {
+
+        (!characterGroup.has(key) && HSK6.get(key)) ? characterGroup.set(key, `${HSK6.get(key)}:HSK6`) : "";
+    }
+
+    for (const key of HSK5.keys()) {
+        if (key.includes("动画"))
+            console.log(key);
+        (!characterGroup.has(key) && HSK5.get(key)) ? characterGroup.set(key, `${HSK5.get(key)}:HSK5`) : "";
+    }
+
+    for (const key of HSK4.keys()) {
+
+        (!characterGroup.has(key) && HSK4.get(key)) ? characterGroup.set(key, `${HSK4.get(key)}:HSK4`) : "";
+    }
+
+    for (const key of HSK3.keys()) {
+
+        (!characterGroup.has(key) && HSK3.get(key)) ? characterGroup.set(key, `${HSK3.get(key)}:HSK3`) : "";
+    }
+
+    for (const key of HSK2.keys()) {
+
+        (!characterGroup.has(key) && HSK2.get(key)) ? characterGroup.set(key, `${HSK2.get(key)}:HSK2`) : "";
+    }
+
+    for (const key of HSK1.keys()) {
+
+        (!characterGroup.has(key) && HSK1.get(key)) ? characterGroup.set(key, `${HSK1.get(key)}:HSK1`) : "";
+    }
+
+    for (const key of HSK7.keys()) {
+
+        (!characterGroup.has(key) && HSK7.get(key)) ? characterGroup.set(key, `${HSK7.get(key)}:HSK7+`) : "";
+    }
+
     const style = document.createElement("style");
     style.innerHTML = `
     hsk:not([disabled]):before {
@@ -157,7 +204,6 @@ async function main() {
         line-height: 1;
     }`
     document.querySelector("body").appendChild(style);
-
     setInterval(update, 700);
 }
 

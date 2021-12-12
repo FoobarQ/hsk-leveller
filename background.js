@@ -1,6 +1,7 @@
 let isActive = false;
 chrome.action.onClicked.addListener((tab) => {
     if (isActive) {
+        isActive = false;
         chrome.tabs.reload();
         return;
     }
